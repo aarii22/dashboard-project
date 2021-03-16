@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: rgb(161, 161, 161) transparent;
+    scrollbar-width: thin;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+    height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+h1{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #303030;
+}
+h2{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+a {
+    text-decoration: none !important;
+}
+img{
+    max-width: 100%;
+    line-height: 0;
+    vertical-align: middle;
+}
+.d-flex {
+    display: flex;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.center-a{
+    text-align: center;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(161, 161, 161); 
+    border-radius: 20px;
+}
+/* Header */
+header{
+    background: linear-gradient(279.68deg, #5F48F8 0%, #7943F5 51.56%, #8E3FF3 100%), #9F5DF1;
+    box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+header .user-detail{
+    text-align: right;
+    padding-bottom: 30px;
+}
+header .search-content{
+    flex-basis: 70%;
+    margin-right: 30px;
+}
+header .search-btn{
+    flex-basis: 30%;
+    text-align: right;
+}
+.primary-btn{
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: #6547F8;
+    padding: 9px 130px;
+    font-size: 22px;
+    font-weight: 500;
+    border: transparent;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in;
+}
+.sec-btn{
+    background: #9465FB;
+    border-radius: 8px;
+    padding: 7px 20px;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+.sec-btn:nth-child(even){
+    margin: 0px 20px;
+}
+.sec-btn:hover{
+    border: 2px solid #D2BDFF;
+}
+header .search-content input{
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 13px 27px;
+    color: #454545;
+    width: 100%;
+    box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+header .search-content form{
+    margin-bottom: 20px;
+}
+/* Container */
+.user-section{
+    flex-basis: 30%;
+    margin-right: 5px;
+}
+.user-details{
+    flex-basis: 70%;
+}
+/* User info */
+.user-section .user-section-head{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.user-section .user-section-head .right{
+    align-items: center;
+}
+.user-section .user-section-head span{
+    padding: 5px 15px;
+    color: #949494;
+    font-size: 14px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.user-section .user-cards{
+    max-height: 65vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 12px;
+}
+.user-section .user-cards .user{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 15px 30px;
+    margin: 0px 5px 10px 0px;
+    display: flex;
+    border-left: 5px solid transparent;
+    transition: all 0.2s ease-in;
+}
+.user-section .user-cards .user:hover, .user-section .user-cards .user.active{
+    border-left: 5px solid #6F45F7;
+}
+.user-section .user-cards .user h1, .user-details .user-details-head{
+    color: #303030;
+}
+.user-section .user-cards .user span, .user-details .user-details-head{
+    color: #808080;
+    font-size: 14px;
+}
+/* User Details */
+.user-details{
+    padding: 30px 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+.user-details .user-details-head{
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.user-details .badges, .user-details .details{
+    margin-bottom: 25px;
+}
+.user-details .badge{
+    background: #9465FB;
+    border-radius: 34px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+}
+.user-details .badge:nth-child(even){
+    margin: 0px 15px;
+}
+.user-details .status{
+    align-items: center;
+    margin-bottom: 25px;
+}
+.user-details .status .badge{
+    background-color: #42CD00;
+}
+.user-details .details:last-child{
+    margin-bottom: 0px;
+}
+.user-details .details p{
+    font-size: 16px;
+    color: #737373;
+    margin: 8px 0px;
+}
+@media (max-width: 991px) {
+    header .wrapper{
+        flex-direction: column;
+        text-align: center;
+    }
+    header .search-content{
+        margin: 0px 0px 30px 0px;
+    }
+    header .search-tools{
+        justify-content: space-evenly;
+    }
+    header .search-btn{
+        text-align: center;
+    }
+    .user-section{
+        flex-basis: 100%;
+    }
+    .user-details{
+        display: none;
+    }
+}
