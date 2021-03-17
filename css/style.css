@@ -54,7 +54,6 @@ img{
 .custom-container {
     width: 90%;
     margin: 0 auto;
-    overflow: hidden;
 }
 .center-a{
     text-align: center;
@@ -129,6 +128,10 @@ header .search-btn{
 .show>.btn-secondary.dropdown-toggle{
     border: 2px solid #D2BDFF !important;
     background-color: #9465FB !important;
+    box-shadow: unset;
+}
+.btn-secondary.focus, .btn-secondary:focus{
+    box-shadow: unset;
 }
 header .search-content input{
     background: rgba(255, 255, 255, 0.8);
