@@ -19,6 +19,10 @@
     <header>
         <div class="custom-container">
             <div class="user-detail">
+                <div class="back-fn">
+                    <img src="./images/arrow.png" alt="">
+                    <span>Back</span>
+                </div>
                 <picture>
                     <img src="./images/saved.svg" alt="saved" title="saved" />
                     <img src="./images/user.svg" alt="user" title="user" />
@@ -227,6 +231,51 @@
             <!--  -->
         </div>
     </div>
+    <!--  -->
+    <!-- Footer -->
+    <header class="footer">
+        <div class="custom-container">
+            <div class="wrapper d-flex">
+                <div class="search-content">
+                    <form>
+                        <i class="fas fa-search"></i>
+                        <input type="search" placeholder="Search like Skill, Technology, Domain...">
+                        <label for="">| Advanced search <img src="./images/drop-down-2.png" alt=""></label>
+                        <!-- <i class="fas fa-chevron-down"></i> -->
+                    </form>
+                    <div class="search-tools d-flex">
+                        <button class="filter sec-btn" data-toggle="modal" data-target="#exampleModal">
+                            <img src="./images/filter.png" alt="">
+                            <span>Filters</span>
+                            <img src="./images/drop-down.png" />
+                        </button>
+                        <button class="consultant sec-btn">
+                            <img src="./images/consultant.png" alt="">
+                            <span>Consultants</span>
+                        </button>
+                        <div class="dropdown">
+                            <button class="sec-btn btn btn-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <img src="./images/services.png" alt="">
+                                Services
+                                <img src="./images/drop-down.png" />
+                                <!-- <i class="fas fa-chevron-down"></i> -->
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Service 1</a>
+                                <a class="dropdown-item" href="#">Service 2</a>
+                                <a class="dropdown-item" href="#">Service 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-btn">
+                    <button class="primary-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
     <!--  -->
     <!-- BS Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

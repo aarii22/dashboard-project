@@ -74,8 +74,13 @@ header{
     margin-bottom: 10px;
 }
 header .user-detail{
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     padding-bottom: 15px;
+}
+header .user-detail .back-fn{
+    color: #FFFFFF;
+    display: none;
 }
 header .search-content{
     flex-basis: 70%;
@@ -97,7 +102,7 @@ header .search-btn{
     box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in;
 }
-.primary-btn:focus{
+.primary-btn:focus, .sec-btn:focus{
     outline: none;
 }
 .sec-btn{
@@ -274,6 +279,10 @@ header .service .dropdown{
     color: #737373;
     margin: 8px 0px;
 }
+/* Footer */
+.footer{
+    display: none;
+}
 /* Modal */
 .modal .modal-header{
     border: none;
@@ -299,6 +308,18 @@ header .service .dropdown{
     header .wrapper{
         flex-direction: column;
         text-align: center;
+        display: none !important;
+    }
+    .footer .wrapper{
+        flex-direction: column;
+        text-align: center;
+        display: block !important;
+    }
+    header .user-detail{
+        justify-content: space-between;
+    }
+    header .user-detail .back-fn{
+        display: block;
     }
     header .search-content{
         margin: 0px 0px 30px 0px;
@@ -327,7 +348,9 @@ header .service .dropdown{
         font-size: 13px;
     }
     .user-section .user-cards{
-        max-height: unset;
+        max-height: 55vh;
+        overflow: auto;
+        padding-bottom: 25px;
     }
     .user-section .user-cards .user{
         margin-right: 0;
@@ -337,6 +360,13 @@ header .service .dropdown{
     }
     .modal-dialog{
         max-width: 50%;
+    }
+    .footer{
+        display: block;
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+        margin: 0;
     }
 }
 @media (max-width: 767px){
