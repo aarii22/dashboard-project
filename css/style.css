@@ -320,7 +320,6 @@ svg:hover{
     header .wrapper{
         flex-direction: column;
         text-align: center;
-        display: none !important;
     }
     .footer .wrapper{
         flex-direction: column;
@@ -378,7 +377,6 @@ svg:hover{
         max-width: 50%;
     }
     .footer{
-        display: block;
         position: fixed;
         bottom: 0%;
         width: 100%;
