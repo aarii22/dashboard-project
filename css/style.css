@@ -303,6 +303,9 @@ header .service .dropdown{
     .user-section .user-cards{
         max-height: unset;
     }
+    .user-section .user-cards .user{
+        margin-right: 0;
+    }
     .modal .modal-body{
         flex-direction: column;
     }
