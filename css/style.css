@@ -180,7 +180,7 @@ header .service .dropdown{
     margin-left: 10px;
 }
 .user-section .user-cards{
-    max-height: 65vh;
+    max-height: 64vh;
     overflow-x: hidden;
     overflow-y: auto;
     border-radius: 12px;
