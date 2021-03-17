@@ -365,7 +365,11 @@ svg:hover{
         margin-right: 0;
     }
     .modal .modal-body{
-        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .modal .modal-body .sec{
+        flex-basis: 50%;
+        margin: 0;
     }
     .modal-dialog{
         max-width: 50%;
