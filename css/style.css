@@ -129,7 +129,7 @@ header .search-content input{
     background: rgba(255, 255, 255, 0.8);
     border: 2px solid #FFFFFF;
     border-radius: 8px;
-    padding: 5px 27px;
+    padding: 5px 40px;
     color: #454545;
     width: 100%;
     box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
@@ -146,6 +146,13 @@ header .search-content form label{
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+}
+header .search-content form .fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    color: #454545;
 }
 header .service{
     position: relative;
@@ -335,5 +342,15 @@ header .service .dropdown{
 @media (max-width: 767px){
     .modal-dialog{
         max-width: 100%;
+    }
+}
+@media (max-width: 360px){
+    .search-tools{
+        flex-direction: column;
+    }
+    .search-tools button{
+        margin-bottom: 10px !important;
+        width: 80%;
+        align-self: center;
     }
 }
