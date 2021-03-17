@@ -217,6 +217,15 @@ header .service .dropdown{
     align-items: center;
     justify-content: space-evenly;
 }
+svg:hover{
+    cursor: pointer;
+}
+.user svg:hover circle, .user-details svg:hover circle{
+    fill: #7844F6;
+}
+.user svg:hover path, .user-details svg:hover path{
+    fill: white;
+}
 .user-section .user-cards .user picture img, .user-details .content-right picture{
     max-width: 80%;
 }
