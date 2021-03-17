@@ -9,25 +9,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="custom-container">
             <div class="user-detail">
-                <img src="" alt="saved" title="saved" />
-                <img src="" alt="user" title="user" />
+                <picture>
+                    <img src="" alt="saved" title="saved" />
+                    <img src="" alt="user" title="user" />
+                </picture>
             </div>
             <div class="wrapper d-flex">
                 <div class="search-content">
                     <form>
                         <input type="search" placeholder="Search like Skill, Technology, Domain...">
-                        <!-- <label for="">Advanced search <i class="fas fa-chevron-down"></i></label> -->
+                        <label for="">| Advanced search <i class="fas fa-chevron-down"></i></label>
                     </form>
                     <div class="search-tools d-flex">
-                        <div class="filter sec-btn">
+                        <div class="filter sec-btn" data-toggle="modal" data-target="#exampleModal">
                             <img src="" alt="">
                             <span>Filters</span>
                             <i class="fas fa-chevron-down"></i>
@@ -36,10 +40,18 @@
                             <img src="" alt="">
                             <span>Consultants</span>
                         </div>
-                        <div class="service sec-btn">
-                            <img src="" alt="">
-                            <span>Services</span>
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="dropdown">
+                            <button class="sec-btn btn btn-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Services
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Service 1</a>
+                                <a class="dropdown-item" href="#">Service 2</a>
+                                <a class="dropdown-item" href="#">Service 3</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,8 +63,8 @@
     </header>
     <!--  -->
     <!-- Container -->
-    <div class="container">
-        <div class="wrapper d-flex">
+    <div class="custom-container">
+        <div class="content-wrapper d-flex">
             <!-- User info -->
             <div class="user-section">
                 <!-- User info head -->
@@ -75,10 +87,10 @@
                             <span>Senior UI Designer</span>
                             <img src="" alt="">
                         </div>
-                        <div class="user-right">
+                        <picture class="user-right">
                             <img src="" alt=""><br>
                             <img src="" alt="">
-                        </div>
+                        </picture>
                     </div>
                     <div class="user active">
                         <div class="user-left">
@@ -87,10 +99,10 @@
                             <span>Data Analyst</span>
                             <img src="" alt="">
                         </div>
-                        <div class="user-right">
+                        <picture class="user-right">
                             <img src="" alt=""><br>
                             <img src="" alt="">
-                        </div>
+                        </picture>
                     </div>
                     <div class="user">
                         <div class="user-left">
@@ -99,10 +111,10 @@
                             <span>48 Hours </span>
                             <img src="" alt="">
                         </div>
-                        <div class="user-right">
+                        <picture class="user-right">
                             <img src="" alt=""><br>
                             <img src="" alt="">
-                        </div>
+                        </picture>
                     </div>
                     <div class="user">
                         <div class="user-left">
@@ -111,10 +123,10 @@
                             <span>Project Manager</span>
                             <img src="" alt="">
                         </div>
-                        <div class="user-right">
+                        <picture class="user-right">
                             <img src="" alt=""><br>
                             <img src="" alt="">
-                        </div>
+                        </picture>
                     </div>
                     <div class="user">
                         <div class="user-left">
@@ -123,10 +135,10 @@
                             <span>90 Hours</span>
                             <img src="" alt="">
                         </div>
-                        <div class="user-right">
+                        <picture class="user-right">
                             <img src="" alt=""><br>
                             <img src="" alt="">
-                        </div>
+                        </picture>
                     </div>
                     <div class="user">
                         <div class="user-left">
@@ -135,10 +147,10 @@
                             <span>Project Manager</span>
                             <img src="" alt="">
                         </div>
-                        <div class="user-right">
+                        <picture class="user-right">
                             <img src="" alt=""><br>
                             <img src="" alt="">
-                        </div>
+                        </picture>
                     </div>
                     <div class="user">
                         <div class="user-left">
@@ -147,10 +159,10 @@
                             <span>90 Hours</span>
                             <img src="" alt="">
                         </div>
-                        <div class="user-right">
+                        <picture class="user-right">
                             <img src="" alt=""><br>
                             <img src="" alt="">
-                        </div>
+                        </picture>
                     </div>
                 </div>
                 <!--  -->
@@ -212,6 +224,96 @@
         </div>
     </div>
     <!--  -->
+    <!-- BS Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex">
+                    <div class="sec sec-1">
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Skills</label>
+                        </form>
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Work Hours</label>
+                        </form>
+                    </div>
+                    <div class="sec sec-2">
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Technology</label>
+                        </form>
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Affirmation</label>
+                        </form>
+                    </div>
+                    <div class="sec sec-3">
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Business</label>
+                        </form>
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Partners</label>
+                        </form>
+                    </div>
+                    <div class="sec sec-4">
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Roles</label>
+                        </form>
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Company</label>
+                        </form>
+                    </div>
+                    <div class="sec sec-5">
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Locations</label>
+                        </form>
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Client rating</label>
+                        </form>
+                    </div>
+                    <div class="sec sec-6">
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Work Type</label>
+                        </form>
+                        <form action="">
+                            <input type="checkbox">
+                            <label for="">Partner rating</label>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
