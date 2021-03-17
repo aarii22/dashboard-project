@@ -358,16 +358,16 @@ svg:hover{
         margin: 0 !important;
         font-size: 13px;
     }
-    /* .user-section .user-cards{
+    .user-section .user-cards{
         max-height: 55vh;
         overflow: auto;
         padding-bottom: 25px;
-    } */
-    .user-section .user-cards{
+    }
+    /* .user-section .user-cards{
         max-height: unset;
         overflow: auto;
         padding-bottom: 0px;
-    }
+    } */
     .user-section .user-cards .user{
         margin-right: 0;
     }
