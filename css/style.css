@@ -70,20 +70,23 @@ header{
     background: linear-gradient(279.68deg, #5F48F8 0%, #7943F5 51.56%, #8E3FF3 100%), #9F5DF1;
     box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.2);
     padding: 20px 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 header .user-detail{
     display: flex;
     justify-content: flex-end;
     padding-bottom: 15px;
 }
+header .user-detail picture img{
+    margin: 0px 8px;
+}
 header .user-detail .back-fn{
     color: #FFFFFF;
     display: none;
 }
 header .search-content{
-    flex-basis: 70%;
-    margin-right: 30px;
+    flex-basis: 75%;
+    /* margin-right: 30px; */
 }
 header .search-btn{
     flex-basis: 30%;
@@ -155,6 +158,16 @@ header .search-content form label{
     top: 50%;
     transform: translateY(-50%);
 }
+header .search-content form label span{
+    margin-right: 10px;
+}
+header .search-content form label i{
+    color: #454545;
+    margin-left: 10px;
+}
+header .search-content form label:hover, header .search-content form label:hover i{
+    color: black;
+}
 header .search-content form .fa-search{
     position: absolute;
     top: 50%;
@@ -185,6 +198,7 @@ header .service .dropdown{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    padding-right: 11px;
 }
 .user-section .user-section-head .right{
     align-items: center;
@@ -231,12 +245,16 @@ svg:hover{
 }
 .user-section .user-cards .user picture img, .user-details .content-right picture{
     max-width: 80%;
+} 
+.user-details .content-right picture svg{
+    margin: 0px 5px;
 }
 .user-section .user-cards .user:hover, .user-section .user-cards .user.active{
     border-left: 5px solid #6F45F7;
 }
 .user-section .user-cards .user h1, .user-details .user-details-head{
     color: #303030;
+    cursor: pointer;
 }
 .user-section .user-cards .user span, .user-details .user-details-head{
     color: #808080;
@@ -250,6 +268,11 @@ svg:hover{
     border-radius: 12px;
     max-height: 70vh;
     overflow-y: auto;
+}
+.user-details.active{
+    transition: all 1s ease-in;
+    animation-name: example;
+    animation-duration: 2s;
 }
 .user-details .user-details-head{
     justify-content: space-between;
@@ -315,6 +338,48 @@ svg:hover{
 }
 .modal .modal-body .sec label{
     margin: 0px 10px;
+}
+.modal .user-details{
+    flex-basis: 100%;
+    max-height: unset;
+    box-shadow: unset;
+    display: block;
+    padding: 0;
+}
+.detail-pop .modal-dialog{
+    max-width: 100%;
+}
+/* .mobile-filter .modal-dialog{
+    max-width: 60%;
+} */
+.mobile-filter .modal-header, .mobile-filter .modal-body, .mobile-filter .modal-footer{
+    background-color: #F5F0FF;
+    border: none;
+}
+.mobile-filter .mb-head{
+    width: 80%;
+    margin: 0 auto;
+}
+.mobile-filter .m-head{
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #CCC2E0;
+}
+.mobile-filter .modal-body .sec{
+    margin: 0;
+}
+.mobile-filter .modal-body .sec form{
+    padding: 10px 0px;
+}
+.mobile-filter .modal-body .m-head{
+    margin-top: 30px;
+}
+.mobile-filter .modal-body label{
+    color: #141414;
+}
+@keyframes example {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 @media (max-width: 991px) {
     header .wrapper{
@@ -387,10 +452,17 @@ svg:hover{
         width: 100%;
         margin: 0;
     }
+    
 }
 @media (max-width: 767px){
     .modal-dialog{
         max-width: 100%;
+    }
+    .modal .user-details .badges{
+        flex-direction: column;
+    }
+    .modal .user-details .badges .badge{
+        margin: 0px 0px 15px 0px;
     }
 }
 @media (max-width: 360px){
@@ -401,5 +473,9 @@ svg:hover{
         margin-bottom: 10px !important;
         width: 80%;
         align-self: center;
+    }
+    .modal .user-details{
+        flex-basis: 83%;
+        margin: auto;
     }
 }
